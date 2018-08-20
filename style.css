@@ -1,0 +1,66 @@
+.modal {
+    height: 100%;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(14, 1fr);
+    grid-template-rows: 50px auto 50px;
+    grid-template-areas: 
+        "h h h h h h h h h h h h h h"
+        ". l l l l l . . r r r r r ."
+        "f f f f f f f f f f f f f f";
+}
+
+.modal > div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2em;
+            color: #ffeead;
+          }
+
+html, body {
+            box-sizing: border-box;
+            background-color: #ffeead;
+            height: 100%;
+            padding: 10px;
+            margin: 0px;
+          }
+
+          .modal > div:nth-child(1n) {
+            background-color: #96ceb4;	
+          }
+          
+          .modal > div:nth-child(3n) {
+            background-color: #88d8b0;
+          }
+          
+          .modal > div:nth-child(2n) {
+            background-color: #ff6f69;
+          }
+          
+          .modal > div:nth-child(4n) {
+            background-color: #ffcc5c;
+          }
+
+
+.header {
+    grid-area: h;
+}
+
+.login-buttons {
+    grid-area: l;
+
+}
+.login-input {
+    grid-area: r;
+
+}
+.password-input {
+
+}
+.login {
+
+}
+.footer {
+    grid-area: f;
+}
