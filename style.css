@@ -3,10 +3,17 @@
     display: grid;
     grid-gap: 5px;
     grid-template-columns: repeat(14, 1fr);
-    grid-template-rows: 50px auto 50px;
+    grid-template-rows: 50px 40px 40px 40px 30px 30px  auto 50px;
+    border-top: 2px solid red;
+    background-color: #f3f3f3; 
     grid-template-areas: 
         "h h h h h h h h h h h h h h"
+        ". . . . . . . . . . . . . ."
+        ". fb fb fb fb fb . . . . . . . . "
         ". l l l l l . . r r r r r ."
+        ". . . . . . . . p p p p p ."
+        ". . . . . . . . c c c c c ."
+        ". . . . . . . . b b b b b ."
         "f f f f f f f f f f f f f f";
 }
 
@@ -26,41 +33,95 @@ html, body {
             margin: 0px;
           }
 
-          .modal > div:nth-child(1n) {
-            background-color: #96ceb4;	
+          .modal .header {
+            background-color: white;
+            color: black;
           }
-          
-          .modal > div:nth-child(3n) {
-            background-color: #88d8b0;
+          .modal .facebook {
+            background-color: #3e5b96;
+            color: white;
+            padding-right: 20px; 
+            font-size: 14px;
           }
-          
-          .modal > div:nth-child(2n) {
-            background-color: #ff6f69;
+          .modal img{
+           margin-right: 40px;
           }
-          
-          .modal > div:nth-child(4n) {
-            background-color: #ffcc5c;
+          .modal .google {
+            background-color: #dd5342;
+            color: white;
+            padding-right: 20px;
+            font-size: 14px;
           }
+          .modal .login {
+            color: black;
+            font-size: 14px;
+            }
+            .modal .password {
+              color: black;
+              font-size: 14px;
+              }
+              .modal .check {
+                font-size: 14px;
+                color: black;
+                }
 
+                .button-fb {
+                  background-color: #3e5b96;
+                }
+                .button-gl {
+                  background-color: #dd5342;
+                }
+               
+                .button {
+                  background-color:black;
+                  border: none;
+                  color: white;
+                  padding: 10px 20px;
+                  text-align: center;
+                  text-decoration: none;
+                  display: inline-block;
+                  font-size: 14px;
+                  margin: 4px 2px;
+                  cursor: pointer;
+                  
+              }
+
+              .btn u {
+                font-size: 14px;
+                color: black;
+              }
+              .modal .footer {
+                color: black;
+                background-color: white;
+                font-size: 14px;
+                }
+         
 
 .header {
     grid-area: h;
+    grid-row-start: 3px solid red;
 }
 
-.login-buttons {
+.google{
     grid-area: l;
-
 }
-.login-input {
+.facebook {
+  grid-area: fb;
+ }
+.login{
     grid-area: r;
-
 }
-.password-input {
 
+.password{
+  grid-area: p;
 }
-.login {
+.check {
+  grid-area: c;
+}
+.btn {
+  grid-area: b;
+}
 
-}
 .footer {
     grid-area: f;
 }
