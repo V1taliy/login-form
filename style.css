@@ -3,10 +3,17 @@
     display: grid;
     grid-gap: 5px;
     grid-template-columns: repeat(14, 1fr);
-    grid-template-rows: 100px auto 100px;
+    grid-template-rows: 100px 50px 50px 50px 50px 50px  auto 100px;
+    border-top: 2px solid red;
+    background-color: #f3f3f3; 
     grid-template-areas: 
         "h h h h h h h h h h h h h h"
+        ". . . . . . . . . . . . . ."
+        ". fb fb fb fb fb . . . . . . . . "
         ". l l l l l . . r r r r r ."
+        ". . . . . . . . p p p p p ."
+        ". . . . . . . . c c c c c ."
+        ". . . . . . . . b b b b b ."
         "f f f f f f f f f f f f f f";
 }
 
@@ -26,65 +33,140 @@ html, body {
             margin: 0px;
           }
 
-          .modal > div:nth-child(1n) {
-            background-color: #96ceb4;	
+          .modal .header {
+            background-color: white;
+            color: black;
           }
-          
-          .modal > div:nth-child(3n) {
-            background-color: #88d8b0;
-          }
-          
-          .modal > div:nth-child(2n) {
-            background-color: #ff6f69;
-          }
-          
-          .modal > div:nth-child(4n) {
-            background-color: #ffcc5c;
-          }
+          .modal a {
+              position: absolute;
+              padding-left: 90%;
+              }
 
+          .modal .facebook {
+            background-color: #3e5b96;
+            color: white;
+            padding-right: 20px; 
+            font-size: 14px;
+            border-radius: 5px;
+          }
+          .modal img{
+           margin-right: 40px;
+           padding-right: 40%
+          }
+          .modal .google {
+            background-color: #dd5342;
+            color: white;
+            padding-right: 20px;
+            font-size: 14px;
+            border-radius: 5px;
+           
+          }
+         
+          .vl {
+              position: absolute;
+            border-right: 4px solid lightgrey;
+            height: 500px;
+            left: 50%;
+            top: 20%;
 
-.header {
+        }
+          .modal .login {
+            color: black;
+            font-size: 14px;
+            margin-right: 72%;
+            }
+            .modal .password {
+              color: black;
+              font-size: 14px;
+              margin-right: 75%;
+              height: 30px;
+
+              }
+              .modal .check {
+                font-size: 14px;
+                color: black;
+                margin-right: 80%;
+                }
+
+                .button-fb {
+                  background-color: #3e5b96;
+                }
+                .button-gl {
+                  background-color: #dd5342;
+                }
+               
+                .button {
+                  background-color:black;
+                  border: none;
+                  color: white;
+                  padding: 10px 20px;
+                  text-align: center;
+                  text-decoration: none;
+                  display: inline-block;
+                  font-size: 14px;
+                  margin: 4px 2px;
+                  cursor: pointer;
+                  
+              }
+
+              input[type="text"] {
+                height: 40px;
+                width: 440px;
+                
+            }
+              input[type="password"] {
+                  height: 40px;
+                  width: 340px;
+                  margin-top: 60px;
+              }
+
+              .btn u {
+                font-size: 14px;
+                color: black;
+              }
+              .modal .footer {
+                color: black;
+                background-color: white;
+                font-size: 14px;
+                }
+
+            
+         .header {
     grid-area: h;
+    grid-row-start: 3px solid red;
+}
+.line {
+    position: absolute;
+    right: 10%;
+    top: 20%;
+
+}
+.btn{
+    position: absolute;
+    right: 30%;
+    top: 40%
 }
 
-.left-form {
-    display: grid;
-    height: 100%
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 40px 40px 40px auto ;
-    grid-template-areas: 
-        ". . . . . . . . . . . ."
-        "b b b b b b b b b b b b"
-        "r r r r r r r r r r r r"
-        ". . . . . . . . . . . .";
-}
-.login-buttons {
+.google{
     grid-area: l;
 }
-
-.login-buttons > div:nth-child(1n){
-    background-color: blue;
-}
-.login-buttons > div:nth-child(2n){
-    background-color: red;
-}
-.btn-1 {
-    grid-area: b;
-    }
-
-.btn-1 {
+.facebook {
+  grid-area: fb;
+ }
+.login{
     grid-area: r;
 }
-.login-input {
-    grid-area: r;
 
+.password{
+  grid-area: p;
 }
-.password-input {
+.check {
+  grid-area: c;
+}
+.btn {
+  grid-area: b;
+}
 
-}
-.login {
-
-}
 .footer {
     grid-area: f;
 }
